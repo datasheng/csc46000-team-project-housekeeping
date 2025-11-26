@@ -1,2 +1,0 @@
-Zillow Observed Rent Index (ZORI): Observed market rate of rent across a given region. Weightd to the rental housing stock to ensure representativeness across entire market. The index is dollar-denominated by computing the mean of listed rents that fall into the 35th to 65th percentile range for all homes and apartments in a given region, which is weighted to reflect the rental housing stock.
-ZORI is created for three different categories: All homes, Single Family Residences, and Multi-Family Residences. 
