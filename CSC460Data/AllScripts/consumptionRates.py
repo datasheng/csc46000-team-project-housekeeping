@@ -55,10 +55,11 @@ for col in df.columns:
         df[col]=df[col].str.replace(r'[$,]', '', regex=True).astype(float)
 df.to_csv('../AllResults/countyData.csv')
 
-#Now ill do the same for the past 10 years
+#Now I'll do the same for the past 10 years
 
 
-years=['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025']
+years=['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015']
+
 
 links=['https://web.archive.org/web/20151220151322/https://livingwage.mit.edu/states/36',
        'https://web.archive.org/web/20161207171550/https://livingwage.mit.edu/states/36',
@@ -97,22 +98,26 @@ for table in tablePerYear:
     count+=1
     dollarAmountperYear.append(total)
 
-data3=np.array(dollarAmountperYear[9:11])
-df2=pd.DataFrame(data3, columns=col_names)
+data2=np.array(dollarAmountperYear[9:11])
+data2=data2[::-1]
+df2=pd.DataFrame(data2, columns=col_names)
 
 col_names2=col_names.copy()
 col_names2.remove('Internet & Mobile')
-data4=np.array(dollarAmountperYear[6:9])
-df3=pd.DataFrame(data4, columns=col_names2)
+data3=np.array(dollarAmountperYear[6:9])
+data3=data3[::-1]
+df3=pd.DataFrame(data3, columns=col_names2)
 
 col_names3=col_names2.copy()
 col_names3.remove('Civic')
 data4=np.array(dollarAmountperYear[:6])
+data4=data4[::-1]
 df4=pd.DataFrame(data4, columns=col_names3)
 
 
 allYears = pd.concat([df2, df3, df4], axis=0)
 dollarAmountperYear
+
 allYears['year']=years
 allYears.set_index('year', inplace=True)
 
