@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 import numpy as np
 
-url='https://livingwage.mit.edu/counties/'
+url='https://livingwage.mit.edu/counties/' 
 
 start=36001
 end=36123
