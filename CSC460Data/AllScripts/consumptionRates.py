@@ -128,8 +128,7 @@ for col in allYears.columns:
         allYears[col]=allYears[col].str.replace(r'[$,]', '', regex=True).astype(float)
         allYears[col]=allYears[col].fillna(allYears[col].mean())
 
-allYears['total']=(allYears['Food']+allYears['Medical']+allYears['Housing']+allYears['Transportation'] + allYears['Civic'] + allYears['Internet & Mobile'] +allYears['Other'] + allYears['Required annual income after taxes'] + allYears['Annual taxes'] + allYears['Required annual income before taxes'])
-
+allYears=allYears.iloc[::-1].reset_index(drop=True)
 
 allYears.to_csv('./AllResults/nysData.csv')
 allYears
