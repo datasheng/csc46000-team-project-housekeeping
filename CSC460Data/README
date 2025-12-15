@@ -1,8 +1,8 @@
 MAKE SURE YOU ARE IN THE CSC460DATA FOLDER!!!!
 YOU CAN DO THIS IN VSCODE TERMINAL OR DOCKER TERMINAL
-IF THE run_all.sh isnt wokring, MAKE SURE THE END OF LINE SEQUENCE IS LF NOT CRLF
+IF THE run_all.sh isnt working, MAKE SURE THE END OF LINE SEQUENCE IS LF NOT CRLF
 
-1.	docker network create csc460_network
+1.	docker network create csc460_network (ONLY DO THIS ONCE!!!! ONCE YOU CREATE IT YOU DON'T HAVE TO CREATE IT AGAIN)
 
 2.	docker run -d --name csc460_database --network csc460_network -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=proj_database -e MYSQL_USER=memyselfi -e MYSQL_PASSWORD=mypassword -v csc460_volume:/var/lib/mysql -p 3306:3306 mysql
 
