@@ -1,25 +1,28 @@
 import pandas as pd
 
-# Read BuyData CSV, skip unnamed index if present
-buy_df = pd.read_csv("AllResults/BuyData.csv", index_col=0)
+# Read CSV, using first column as index if it's an unnamed index
+df = pd.read_csv("AllResults/RentData.csv", index_col=0)
 
-# ID columns to keep
-id_cols = ["RegionID", "SizeRank", "RegionName", "RegionType", "StateName"]
+id_cols = [
+    "RegionID", "SizeRank", "RegionName", "RegionType",
+    "StateName", "State", "Metro", "StateCodeFIPS", "MunicipalCodeFIPS"
+]
 
-# Melt date columns into long format
-long_buy_df = buy_df.melt(
+# Melt to long format
+long_df = df.melt(
     id_vars=id_cols,
     var_name="Date",
-    value_name="PriceValue"
+    value_name="MedianValue"
 )
 
-# Convert Date to datetime
-long_buy_df["Date"] = pd.to_datetime(long_buy_df["Date"], errors='coerce')
+# Drop any rows where Date is not a valid string (if needed)
+long_df = long_df[long_df["Date"].notna()]
 
-# Drop rows where date conversion failed
-long_buy_df = long_buy_df.dropna(subset=["Date"])
+# Convert Date to datetime, adjust format if your CSV has MM/DD/YYYY or YYYY-MM-DD
+long_df["Date"] = pd.to_datetime(long_df["Date"], errors='coerce')
 
-# Optional: save to CSV
-long_buy_df.to_csv("tableauData/BuyData_long.csv", index=False)
+# Optional: drop rows where conversion failed
+long_df = long_df.dropna(subset=["Date"])
 
-print(long_buy_df.head())
+print(long_df.head())
+long_df.to_csv("tableauData/pivotBuyData.csv", index=False)
