@@ -1,0 +1,9 @@
+Data Source: U.S. Census American Community Survey (ACS) 5-Year Estimates
+
+Variables:
+1. Median_Gross_Rent: Median monthly rent paid by renters in the county.
+2. Median_Home_Value: Median value of owner-occupied homes in the county.
+3. Median_Property_Tax: Median annual property taxes paid by homeowners.
+4. Owner_Cost_With_Mortgage: Typical monthly costs for homeowners with a mortgage, including principal, interest, taxes, insurance, and fees.
+5. Owner_Cost_Without_Mortgage: Typical monthly costs for homeowners without a mortgage, including taxes, insurance, and any fees.
+6. Coverage: All counties in New York State, for years 2015–2024.
