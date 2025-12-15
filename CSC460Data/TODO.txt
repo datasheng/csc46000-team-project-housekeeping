@@ -1,0 +1,49 @@
+These are some suggestions on whats left to do for a really good grade :)))))))))))))))))))
+
+For Tableau, you’ll want visuals that clearly communicate the cost comparisons, trends, and forecasts. A good set would be:
+Time-Series Line Graphs:
+1. Median Rent over time by county.
+2. Median Home Value over time by county.
+3. Median Property Taxes over time by county.
+
+Cost Comparison:
+1. Bar chart comparing rent vs. buy (owner cost with/without mortgage + taxes) per county.
+2. Break-even timeline: how many months/years renting vs. buying pays off.
+
+Wealth Projection:
+1. Cumulative wealth or savings projection if renting vs. buying, by county.
+
+Heatmaps:
+1. Counties colored by high/low rent, home value, or property tax.
+2. Tables (optional for detail):
+3. Yearly table of median rent, home value, taxes, and owner costs per county for reference.
+
+You can layer filters by year, county, or housing type to make dashboards interactive.
+
+Here’s a clean layout for your Tableau dashboard:
+1. Dashboard Title: Forecasting Housing Outcomes with $250k
+Top Row – Filters:
+Year (slider or dropdown: 2015–2024)
+County (multi-select)
+Housing Scenario (Rent vs Buy)
+
+Left Column – Time-Series Graphs:
+Median Rent Over Time (line chart by county)
+Median Home Value Over Time (line chart by county)
+Median Property Tax Over Time (line chart by county)
+
+
+Right Column – Cost & Break-even:
+Rent vs Buy Comparison (stacked bar chart: Rent vs Owner Costs with/without mortgage)
+Break-even Timeline (line or gantt-style chart showing years until buying becomes cheaper than renting)
+Bottom – Heatmap / Summary Table:
+
+County Heatmap: color-coded by total cost (rent or buy).
+
+Data Table: yearly median rent, home value, taxes, owner costs for selected counties.
+
+Optional Enhancements:
+Tooltips with cumulative costs and NPV/IRR projections.
+Highlighting the county with the fastest break-even point.
+This setup keeps the dashboard interactive, intuitive, and focused on comparing rent vs. buy outcomes.
+If you want, I can also suggest the exact chart types and fields to drag for each visualization in Tableau.
