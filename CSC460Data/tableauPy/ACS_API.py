@@ -26,7 +26,13 @@ for year in years:
     data = r.json()
     
     for row in data[1:]:
-        county_data = {"Year": year, "County": row[-3]}  # Correctly use NAME field
+        county_name = row[-3].replace(" County, New York", "")
+        county_data = {
+            "Year": year,
+            "County": county_name,
+            "State": "New York"
+        }
+
         for i, metric in enumerate(variables.keys()):
             county_data[metric] = row[i]
         all_data.append(county_data)
