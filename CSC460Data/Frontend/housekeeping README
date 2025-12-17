@@ -1,0 +1,22 @@
+Housekeeping
+
+Housekeeping is a data-driven web project that explores the rent versus buy decision in New York at the county level. Rather than focusing on short-term affordability, the project reframes housing decisions around break-even timelines, equity accumulation, and long-term ownership costs.
+The website combines embedded Tableau Public visualizations with custom HTML, CSS, and JavaScript to present housing data as a guided narrative. Users can explore how rent growth, home value appreciation, property taxes, and owner costs interact to shape whether and when buying becomes financially preferable to renting.
+The project is fully client-side and does not collect or store any user data. All interactivity is handled in the browser, and all charts are embedded from Tableau Public.
+
+Files
+The repository contains a single static file:
+housekeeping.html – the complete website, including layout, styling, interactivity, and embedded visualizations.
+
+How to Use
+To view the project locally, download the repository and open housekeeping.html in a modern web browser.
+To publish the site, enable GitHub Pages for the repository and select the root directory as the source. GitHub will generate a public URL where the site can be viewed and shared.
+
+Data and Visualizations
+All charts and maps are powered by Tableau Public and based on publicly available housing data, including ACS median rent, home values, property taxes, and modeled owner costs. The website itself does not perform data processing and is intended for exploratory and educational purposes.
+
+Purpose
+Housekeeping is designed as a data storytelling project that emphasizes interpretation and context over prescriptive advice. It is intended for academic review, portfolio use, and demonstration of applied data visualization and web-based presentation skills.
+
+Acknowledgements
+U.S. Census Bureau (American Community Survey), Tableau Public, and publicly available housing datasets used for analysis and visualization.
