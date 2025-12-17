@@ -1,0 +1,3122 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.25.1117.1115                               -->
+<workbook original-version='18.1' source-build='2025.3.0 (20253.25.1117.1115)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='proj_database' inline='true' name='federated.1usby8x161oxyl126fggt0b5zizh' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='mysql.0s17mtu1j7j5v60zsae910giqf29'>
+            <connection class='mysql' dbname='proj_database' odbc-native-protocol='' one-time-sql='' port='3306' server='localhost' source-charset='' username='memyselfi' />
+          </named-connection>
+        </named-connections>
+      </connection>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph />
+    </datasource>
+    <datasource caption='combined_rent_data' inline='true' name='federated.1h6tykk1sen5q81gm9dvx0kww3ld' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='combined_rent_data' name='textscan.00nylmc0w6fg3j12sh0t90vs9ezh'>
+            <connection class='textscan' directory='C:/Users/Fargh/Coding/College/DataScience/csc46000-team-project-housekeeping/CSC460Data/tableauData' filename='combined_rent_data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.00nylmc0w6fg3j12sh0t90vs9ezh' name='combined_rent_data.csv' table='[combined_rent_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='Year' ordinal='0' />
+            <column datatype='string' name='County' ordinal='1' />
+            <column datatype='real' name='MedianRent' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[combined_rent_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[combined_rent_data.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined_rent_data.csv_94722C59ADB1460C9B0726BCB856400A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>County</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[County]</local-name>
+            <parent-name>[combined_rent_data.csv]</parent-name>
+            <remote-alias>County</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[combined_rent_data.csv_94722C59ADB1460C9B0726BCB856400A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MedianRent</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MedianRent]</local-name>
+            <parent-name>[combined_rent_data.csv]</parent-name>
+            <remote-alias>MedianRent</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined_rent_data.csv_94722C59ADB1460C9B0726BCB856400A]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='Median Rent' datatype='real' name='[MedianRent]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='combined_rent_data.csv' datatype='table' name='[__tableau_internal_object_id__].[combined_rent_data.csv_94722C59ADB1460C9B0726BCB856400A]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='combined_rent_data.csv' id='combined_rent_data.csv_94722C59ADB1460C9B0726BCB856400A'>
+            <properties context=''>
+              <relation connection='textscan.00nylmc0w6fg3j12sh0t90vs9ezh' name='combined_rent_data.csv' table='[combined_rent_data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='Year' ordinal='0' />
+                  <column datatype='string' name='County' ordinal='1' />
+                  <column datatype='real' name='MedianRent' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='county_buy_vs_rent_summary' inline='true' name='federated.01jn0sw07ikci0103pci819uddcx' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='county_buy_vs_rent_summary' name='textscan.145vagl15o2ovn1dn0wc10qmbydn'>
+            <connection class='textscan' directory='C:/Users/Fargh/Coding/College/DataScience/csc46000-team-project-housekeeping/CSC460Data/tableauData' filename='county_buy_vs_rent_summary.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.145vagl15o2ovn1dn0wc10qmbydn' name='county_buy_vs_rent_summary.csv' table='[county_buy_vs_rent_summary#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='County' ordinal='0' />
+              <column datatype='real' name='Buy_NPV' ordinal='1' />
+              <column datatype='real' name='Rent_NPV' ordinal='2' />
+              <column datatype='real' name='Buy_IRR' ordinal='3' />
+              <column datatype='string' name='Rent_IRR' ordinal='4' />
+              <column datatype='boolean' name='Buy_Eligible' ordinal='5' />
+            </columns>
+          </relation>
+          <relation connection='textscan.145vagl15o2ovn1dn0wc10qmbydn' name='cash_flows_for_tableau.csv' table='[cash_flows_for_tableau#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='Year' ordinal='0' />
+              <column datatype='string' name='County' ordinal='1' />
+              <column datatype='string' name='State' ordinal='2' />
+              <column datatype='integer' name='Median_Gross_Rent' ordinal='3' />
+              <column datatype='integer' name='Median_Home_Value' ordinal='4' />
+              <column datatype='integer' name='Median_Property_Tax' ordinal='5' />
+              <column datatype='integer' name='Owner_Cost_With_Mortgage' ordinal='6' />
+              <column datatype='integer' name='Owner_Cost_Without_Mortgage' ordinal='7' />
+              <column datatype='string' name='Date' ordinal='8' />
+              <column datatype='real' name='Mortgage_Rate' ordinal='9' />
+              <column datatype='real' name='Buy_CF' ordinal='10' />
+              <column datatype='integer' name='Rent_CF' ordinal='11' />
+              <column datatype='boolean' name='Buy_Eligible' ordinal='12' />
+              <column datatype='integer' name='Down_Payment_Used' ordinal='13' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Buy_CF]' value='[cash_flows_for_tableau.csv].[Buy_CF]' />
+          <map key='[Buy_Eligible (cash_flows_for_tableau.csv)]' value='[cash_flows_for_tableau.csv].[Buy_Eligible]' />
+          <map key='[Buy_Eligible]' value='[county_buy_vs_rent_summary.csv].[Buy_Eligible]' />
+          <map key='[Buy_IRR]' value='[county_buy_vs_rent_summary.csv].[Buy_IRR]' />
+          <map key='[Buy_NPV]' value='[county_buy_vs_rent_summary.csv].[Buy_NPV]' />
+          <map key='[County (cash_flows_for_tableau.csv)]' value='[cash_flows_for_tableau.csv].[County]' />
+          <map key='[County]' value='[county_buy_vs_rent_summary.csv].[County]' />
+          <map key='[Date]' value='[cash_flows_for_tableau.csv].[Date]' />
+          <map key='[Down_Payment_Used]' value='[cash_flows_for_tableau.csv].[Down_Payment_Used]' />
+          <map key='[Median_Gross_Rent]' value='[cash_flows_for_tableau.csv].[Median_Gross_Rent]' />
+          <map key='[Median_Home_Value]' value='[cash_flows_for_tableau.csv].[Median_Home_Value]' />
+          <map key='[Median_Property_Tax]' value='[cash_flows_for_tableau.csv].[Median_Property_Tax]' />
+          <map key='[Mortgage_Rate]' value='[cash_flows_for_tableau.csv].[Mortgage_Rate]' />
+          <map key='[Owner_Cost_With_Mortgage]' value='[cash_flows_for_tableau.csv].[Owner_Cost_With_Mortgage]' />
+          <map key='[Owner_Cost_Without_Mortgage]' value='[cash_flows_for_tableau.csv].[Owner_Cost_Without_Mortgage]' />
+          <map key='[Rent_CF]' value='[cash_flows_for_tableau.csv].[Rent_CF]' />
+          <map key='[Rent_IRR]' value='[county_buy_vs_rent_summary.csv].[Rent_IRR]' />
+          <map key='[Rent_NPV]' value='[county_buy_vs_rent_summary.csv].[Rent_NPV]' />
+          <map key='[State]' value='[cash_flows_for_tableau.csv].[State]' />
+          <map key='[Year]' value='[cash_flows_for_tableau.csv].[Year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[county_buy_vs_rent_summary.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>County</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[County]</local-name>
+            <parent-name>[county_buy_vs_rent_summary.csv]</parent-name>
+            <remote-alias>County</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[county_buy_vs_rent_summary.csv_40E4EEFF98CE4395A1C693F53CF4C0E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Buy_NPV</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Buy_NPV]</local-name>
+            <parent-name>[county_buy_vs_rent_summary.csv]</parent-name>
+            <remote-alias>Buy_NPV</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[county_buy_vs_rent_summary.csv_40E4EEFF98CE4395A1C693F53CF4C0E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rent_NPV</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Rent_NPV]</local-name>
+            <parent-name>[county_buy_vs_rent_summary.csv]</parent-name>
+            <remote-alias>Rent_NPV</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[county_buy_vs_rent_summary.csv_40E4EEFF98CE4395A1C693F53CF4C0E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Buy_IRR</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Buy_IRR]</local-name>
+            <parent-name>[county_buy_vs_rent_summary.csv]</parent-name>
+            <remote-alias>Buy_IRR</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[county_buy_vs_rent_summary.csv_40E4EEFF98CE4395A1C693F53CF4C0E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rent_IRR</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Rent_IRR]</local-name>
+            <parent-name>[county_buy_vs_rent_summary.csv]</parent-name>
+            <remote-alias>Rent_IRR</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[county_buy_vs_rent_summary.csv_40E4EEFF98CE4395A1C693F53CF4C0E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Buy_Eligible</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Buy_Eligible]</local-name>
+            <parent-name>[county_buy_vs_rent_summary.csv]</parent-name>
+            <remote-alias>Buy_Eligible</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[county_buy_vs_rent_summary.csv_40E4EEFF98CE4395A1C693F53CF4C0E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_85D9FAF2967E49AB8EA608E132DF0D56]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>County</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[County (cash_flows_for_tableau.csv)]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>County</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cash_flows_for_tableau.csv_85D9FAF2967E49AB8EA608E132DF0D56]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cash_flows_for_tableau.csv_85D9FAF2967E49AB8EA608E132DF0D56]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Median_Gross_Rent</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Median_Gross_Rent]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Median_Gross_Rent</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_85D9FAF2967E49AB8EA608E132DF0D56]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Median_Home_Value</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Median_Home_Value]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Median_Home_Value</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_85D9FAF2967E49AB8EA608E132DF0D56]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Median_Property_Tax</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Median_Property_Tax]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Median_Property_Tax</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_85D9FAF2967E49AB8EA608E132DF0D56]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Owner_Cost_With_Mortgage</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Owner_Cost_With_Mortgage]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Owner_Cost_With_Mortgage</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_85D9FAF2967E49AB8EA608E132DF0D56]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Owner_Cost_Without_Mortgage</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Owner_Cost_Without_Mortgage]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Owner_Cost_Without_Mortgage</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_85D9FAF2967E49AB8EA608E132DF0D56]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cash_flows_for_tableau.csv_85D9FAF2967E49AB8EA608E132DF0D56]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mortgage_Rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Mortgage_Rate]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Mortgage_Rate</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_85D9FAF2967E49AB8EA608E132DF0D56]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Buy_CF</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Buy_CF]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Buy_CF</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_85D9FAF2967E49AB8EA608E132DF0D56]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rent_CF</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rent_CF]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Rent_CF</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_85D9FAF2967E49AB8EA608E132DF0D56]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Buy_Eligible</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Buy_Eligible (cash_flows_for_tableau.csv)]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Buy_Eligible</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_85D9FAF2967E49AB8EA608E132DF0D56]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Down_Payment_Used</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Down_Payment_Used]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Down_Payment_Used</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_85D9FAF2967E49AB8EA608E132DF0D56]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Buy CF' datatype='real' name='[Buy_CF]' role='measure' type='quantitative' />
+      <column caption='Buy Eligible (cash flows for tableau.csv)' datatype='boolean' name='[Buy_Eligible (cash_flows_for_tableau.csv)]' role='dimension' type='nominal' />
+      <column caption='Buy Eligible' datatype='boolean' name='[Buy_Eligible]' role='dimension' type='nominal' />
+      <column caption='Buy IRR' datatype='real' name='[Buy_IRR]' role='measure' type='quantitative' />
+      <column caption='Buy NPV' datatype='real' name='[Buy_NPV]' role='measure' type='quantitative' />
+      <column caption='County (cash flows for tableau.csv)' datatype='string' name='[County (cash_flows_for_tableau.csv)]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='Date1' datatype='string' name='[Date]' role='dimension' type='nominal' />
+      <column caption='Down Payment Used' datatype='integer' name='[Down_Payment_Used]' role='measure' type='quantitative' />
+      <column caption='Median Gross Rent' datatype='integer' name='[Median_Gross_Rent]' role='measure' type='quantitative' />
+      <column caption='Median Home Value' datatype='integer' name='[Median_Home_Value]' role='measure' type='quantitative' />
+      <column caption='Median Property Tax' datatype='integer' name='[Median_Property_Tax]' role='measure' type='quantitative' />
+      <column caption='Mortgage Rate' datatype='real' name='[Mortgage_Rate]' role='measure' type='quantitative' />
+      <column caption='Owner Cost With Mortgage' datatype='integer' name='[Owner_Cost_With_Mortgage]' role='measure' type='quantitative' />
+      <column caption='Owner Cost Without Mortgage' datatype='integer' name='[Owner_Cost_Without_Mortgage]' role='measure' type='quantitative' />
+      <column caption='Rent CF' datatype='integer' name='[Rent_CF]' role='measure' type='quantitative' />
+      <column caption='Rent IRR' datatype='string' name='[Rent_IRR]' role='dimension' type='nominal' />
+      <column caption='Rent NPV' datatype='real' name='[Rent_NPV]' role='measure' type='quantitative' />
+      <column caption='State1' datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='cash_flows_for_tableau.csv' datatype='table' name='[__tableau_internal_object_id__].[cash_flows_for_tableau.csv_85D9FAF2967E49AB8EA608E132DF0D56]' role='measure' type='quantitative' />
+      <column caption='county_buy_vs_rent_summary.csv' datatype='table' name='[__tableau_internal_object_id__].[county_buy_vs_rent_summary.csv_40E4EEFF98CE4395A1C693F53CF4C0E5]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='cash_flows_for_tableau.csv' id='cash_flows_for_tableau.csv_85D9FAF2967E49AB8EA608E132DF0D56'>
+            <properties context=''>
+              <relation connection='textscan.145vagl15o2ovn1dn0wc10qmbydn' name='cash_flows_for_tableau.csv' table='[cash_flows_for_tableau#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='Year' ordinal='0' />
+                  <column datatype='string' name='County' ordinal='1' />
+                  <column datatype='string' name='State' ordinal='2' />
+                  <column datatype='integer' name='Median_Gross_Rent' ordinal='3' />
+                  <column datatype='integer' name='Median_Home_Value' ordinal='4' />
+                  <column datatype='integer' name='Median_Property_Tax' ordinal='5' />
+                  <column datatype='integer' name='Owner_Cost_With_Mortgage' ordinal='6' />
+                  <column datatype='integer' name='Owner_Cost_Without_Mortgage' ordinal='7' />
+                  <column datatype='string' name='Date' ordinal='8' />
+                  <column datatype='real' name='Mortgage_Rate' ordinal='9' />
+                  <column datatype='real' name='Buy_CF' ordinal='10' />
+                  <column datatype='integer' name='Rent_CF' ordinal='11' />
+                  <column datatype='boolean' name='Buy_Eligible' ordinal='12' />
+                  <column datatype='integer' name='Down_Payment_Used' ordinal='13' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='county_buy_vs_rent_summary.csv' id='county_buy_vs_rent_summary.csv_40E4EEFF98CE4395A1C693F53CF4C0E5'>
+            <properties context=''>
+              <relation connection='textscan.145vagl15o2ovn1dn0wc10qmbydn' name='county_buy_vs_rent_summary.csv' table='[county_buy_vs_rent_summary#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='County' ordinal='0' />
+                  <column datatype='real' name='Buy_NPV' ordinal='1' />
+                  <column datatype='real' name='Rent_NPV' ordinal='2' />
+                  <column datatype='real' name='Buy_IRR' ordinal='3' />
+                  <column datatype='string' name='Rent_IRR' ordinal='4' />
+                  <column datatype='boolean' name='Buy_Eligible' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[County]' />
+              <expression op='[County (cash_flows_for_tableau.csv)]' />
+            </expression>
+            <first-end-point object-id='county_buy_vs_rent_summary.csv_40E4EEFF98CE4395A1C693F53CF4C0E5' />
+            <second-end-point object-id='cash_flows_for_tableau.csv_85D9FAF2967E49AB8EA608E132DF0D56' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+    <datasource caption='cash_flows_for_tableau' inline='true' name='federated.19cdbq61a7u45117fkvng1x26233' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cash_flows_for_tableau' name='textscan.1sscnxi0rf6f4x10ntzsv0zbuxm2'>
+            <connection class='textscan' directory='C:/Users/Fargh/Coding/College/DataScience/csc46000-team-project-housekeeping/CSC460Data/tableauData' filename='cash_flows_for_tableau.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1sscnxi0rf6f4x10ntzsv0zbuxm2' name='cash_flows_for_tableau.csv' table='[cash_flows_for_tableau#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='Year' ordinal='0' />
+            <column datatype='string' name='County' ordinal='1' />
+            <column datatype='string' name='State' ordinal='2' />
+            <column datatype='integer' name='Median_Gross_Rent' ordinal='3' />
+            <column datatype='integer' name='Median_Home_Value' ordinal='4' />
+            <column datatype='integer' name='Median_Property_Tax' ordinal='5' />
+            <column datatype='integer' name='Owner_Cost_With_Mortgage' ordinal='6' />
+            <column datatype='integer' name='Owner_Cost_Without_Mortgage' ordinal='7' />
+            <column datatype='string' name='Date' ordinal='8' />
+            <column datatype='real' name='Mortgage_Rate' ordinal='9' />
+            <column datatype='real' name='Buy_CF' ordinal='10' />
+            <column datatype='integer' name='Rent_CF' ordinal='11' />
+            <column datatype='boolean' name='Buy_Eligible' ordinal='12' />
+            <column datatype='integer' name='Down_Payment_Used' ordinal='13' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_D79AFC7F4E2C4B13B486661A32B0B2B7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>County</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[County]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>County</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cash_flows_for_tableau.csv_D79AFC7F4E2C4B13B486661A32B0B2B7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cash_flows_for_tableau.csv_D79AFC7F4E2C4B13B486661A32B0B2B7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Median_Gross_Rent</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Median_Gross_Rent]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Median_Gross_Rent</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_D79AFC7F4E2C4B13B486661A32B0B2B7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Median_Home_Value</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Median_Home_Value]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Median_Home_Value</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_D79AFC7F4E2C4B13B486661A32B0B2B7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Median_Property_Tax</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Median_Property_Tax]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Median_Property_Tax</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_D79AFC7F4E2C4B13B486661A32B0B2B7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Owner_Cost_With_Mortgage</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Owner_Cost_With_Mortgage]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Owner_Cost_With_Mortgage</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_D79AFC7F4E2C4B13B486661A32B0B2B7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Owner_Cost_Without_Mortgage</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Owner_Cost_Without_Mortgage]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Owner_Cost_Without_Mortgage</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_D79AFC7F4E2C4B13B486661A32B0B2B7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cash_flows_for_tableau.csv_D79AFC7F4E2C4B13B486661A32B0B2B7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mortgage_Rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Mortgage_Rate]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Mortgage_Rate</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_D79AFC7F4E2C4B13B486661A32B0B2B7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Buy_CF</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Buy_CF]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Buy_CF</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_D79AFC7F4E2C4B13B486661A32B0B2B7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rent_CF</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rent_CF]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Rent_CF</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_D79AFC7F4E2C4B13B486661A32B0B2B7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Buy_Eligible</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Buy_Eligible]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Buy_Eligible</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_D79AFC7F4E2C4B13B486661A32B0B2B7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Down_Payment_Used</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Down_Payment_Used]</local-name>
+            <parent-name>[cash_flows_for_tableau.csv]</parent-name>
+            <remote-alias>Down_Payment_Used</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cash_flows_for_tableau.csv_D79AFC7F4E2C4B13B486661A32B0B2B7]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Buy CF' datatype='real' name='[Buy_CF]' role='measure' type='quantitative' />
+      <column caption='Buy Eligible' datatype='boolean' name='[Buy_Eligible]' role='dimension' type='nominal' />
+      <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='Down Payment Used' datatype='integer' name='[Down_Payment_Used]' role='measure' type='quantitative' />
+      <column caption='Median Gross Rent' datatype='integer' name='[Median_Gross_Rent]' role='measure' type='quantitative' />
+      <column caption='Median Home Value' datatype='integer' name='[Median_Home_Value]' role='measure' type='quantitative' />
+      <column caption='Median Property Tax' datatype='integer' name='[Median_Property_Tax]' role='measure' type='quantitative' />
+      <column caption='Mortgage Rate' datatype='real' name='[Mortgage_Rate]' role='measure' type='quantitative' />
+      <column caption='Owner Cost With Mortgage' datatype='integer' name='[Owner_Cost_With_Mortgage]' role='measure' type='quantitative' />
+      <column caption='Owner Cost Without Mortgage' datatype='integer' name='[Owner_Cost_Without_Mortgage]' role='measure' type='quantitative' />
+      <column caption='Rent CF' datatype='integer' name='[Rent_CF]' role='measure' type='quantitative' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='integer' name='[Year]' role='dimension' type='ordinal' />
+      <column caption='cash_flows_for_tableau.csv' datatype='table' name='[__tableau_internal_object_id__].[cash_flows_for_tableau.csv_D79AFC7F4E2C4B13B486661A32B0B2B7]' role='measure' type='quantitative' />
+      <drill-paths>
+        <drill-path name='State, County'>
+          <field>[State]</field>
+          <field>[County]</field>
+        </drill-path>
+      </drill-paths>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='cash_flows_for_tableau.csv' id='cash_flows_for_tableau.csv_D79AFC7F4E2C4B13B486661A32B0B2B7'>
+            <properties context=''>
+              <relation connection='textscan.1sscnxi0rf6f4x10ntzsv0zbuxm2' name='cash_flows_for_tableau.csv' table='[cash_flows_for_tableau#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='Year' ordinal='0' />
+                  <column datatype='string' name='County' ordinal='1' />
+                  <column datatype='string' name='State' ordinal='2' />
+                  <column datatype='integer' name='Median_Gross_Rent' ordinal='3' />
+                  <column datatype='integer' name='Median_Home_Value' ordinal='4' />
+                  <column datatype='integer' name='Median_Property_Tax' ordinal='5' />
+                  <column datatype='integer' name='Owner_Cost_With_Mortgage' ordinal='6' />
+                  <column datatype='integer' name='Owner_Cost_Without_Mortgage' ordinal='7' />
+                  <column datatype='string' name='Date' ordinal='8' />
+                  <column datatype='real' name='Mortgage_Rate' ordinal='9' />
+                  <column datatype='real' name='Buy_CF' ordinal='10' />
+                  <column datatype='integer' name='Rent_CF' ordinal='11' />
+                  <column datatype='boolean' name='Buy_Eligible' ordinal='12' />
+                  <column datatype='integer' name='Down_Payment_Used' ordinal='13' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='years' inline='true' name='federated.1l10kvr0090v2y13b60dj11jbi31' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='years' name='textscan.04zw3t21gi0xtv1bg73n21t3sv0i'>
+            <connection class='textscan' directory='C:/Users/Fargh/Coding/College/DataScience/csc46000-team-project-housekeeping/CSC460Data/tableauData' filename='years.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.04zw3t21gi0xtv1bg73n21t3sv0i' name='years.csv' table='[years#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US'>
+            <column datatype='integer' name='years' ordinal='0' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[years.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>years</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[years]</local-name>
+            <parent-name>[years.csv]</parent-name>
+            <remote-alias>years</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[years.csv_2839B7BB984046B9B4226837E80A24A5]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='years.csv' datatype='table' name='[__tableau_internal_object_id__].[years.csv_2839B7BB984046B9B4226837E80A24A5]' role='measure' type='quantitative' />
+      <column caption='Years' datatype='integer' name='[years]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='years.csv' id='years.csv_2839B7BB984046B9B4226837E80A24A5'>
+            <properties context=''>
+              <relation connection='textscan.04zw3t21gi0xtv1bg73n21t3sv0i' name='years.csv' table='[years#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US'>
+                  <column datatype='integer' name='years' ordinal='0' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='npv_irr_analysis' inline='true' name='federated.13ldc8t1w14b6k1c0gbxb0cqtvjv' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='npv_irr_analysis' name='textscan.1ehbkmm1ttu2jm0zz73me0bxqls1'>
+            <connection class='textscan' directory='C:/Users/Fargh/Coding/College/DataScience/csc46000-team-project-housekeeping/CSC460Data/tableauData' filename='npv_irr_analysis.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1ehbkmm1ttu2jm0zz73me0bxqls1' name='npv_irr_analysis.csv' table='[npv_irr_analysis#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='Year' ordinal='0' />
+            <column datatype='string' name='County' ordinal='1' />
+            <column datatype='string' name='State' ordinal='2' />
+            <column datatype='integer' name='Median_Gross_Rent' ordinal='3' />
+            <column datatype='integer' name='Median_Home_Value' ordinal='4' />
+            <column datatype='integer' name='Median_Property_Tax' ordinal='5' />
+            <column datatype='integer' name='Owner_Cost_With_Mortgage' ordinal='6' />
+            <column datatype='integer' name='Owner_Cost_Without_Mortgage' ordinal='7' />
+            <column datatype='real' name='Mortgage_Rate' ordinal='8' />
+            <column datatype='real' name='Rent_CF' ordinal='9' />
+            <column datatype='real' name='Buy_CF' ordinal='10' />
+            <column datatype='real' name='Rent_NPV' ordinal='11' />
+            <column datatype='real' name='Buy_NPV' ordinal='12' />
+            <column datatype='string' name='Rent_IRR' ordinal='13' />
+            <column datatype='real' name='Buy_IRR' ordinal='14' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[npv_irr_analysis.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[npv_irr_analysis.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[npv_irr_analysis.csv_627AD5F84D2549E8A0E165B95E9B53E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>County</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[County]</local-name>
+            <parent-name>[npv_irr_analysis.csv]</parent-name>
+            <remote-alias>County</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[npv_irr_analysis.csv_627AD5F84D2549E8A0E165B95E9B53E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[npv_irr_analysis.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[npv_irr_analysis.csv_627AD5F84D2549E8A0E165B95E9B53E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Median_Gross_Rent</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Median_Gross_Rent]</local-name>
+            <parent-name>[npv_irr_analysis.csv]</parent-name>
+            <remote-alias>Median_Gross_Rent</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[npv_irr_analysis.csv_627AD5F84D2549E8A0E165B95E9B53E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Median_Home_Value</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Median_Home_Value]</local-name>
+            <parent-name>[npv_irr_analysis.csv]</parent-name>
+            <remote-alias>Median_Home_Value</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[npv_irr_analysis.csv_627AD5F84D2549E8A0E165B95E9B53E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Median_Property_Tax</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Median_Property_Tax]</local-name>
+            <parent-name>[npv_irr_analysis.csv]</parent-name>
+            <remote-alias>Median_Property_Tax</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[npv_irr_analysis.csv_627AD5F84D2549E8A0E165B95E9B53E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Owner_Cost_With_Mortgage</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Owner_Cost_With_Mortgage]</local-name>
+            <parent-name>[npv_irr_analysis.csv]</parent-name>
+            <remote-alias>Owner_Cost_With_Mortgage</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[npv_irr_analysis.csv_627AD5F84D2549E8A0E165B95E9B53E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Owner_Cost_Without_Mortgage</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Owner_Cost_Without_Mortgage]</local-name>
+            <parent-name>[npv_irr_analysis.csv]</parent-name>
+            <remote-alias>Owner_Cost_Without_Mortgage</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[npv_irr_analysis.csv_627AD5F84D2549E8A0E165B95E9B53E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mortgage_Rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Mortgage_Rate]</local-name>
+            <parent-name>[npv_irr_analysis.csv]</parent-name>
+            <remote-alias>Mortgage_Rate</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[npv_irr_analysis.csv_627AD5F84D2549E8A0E165B95E9B53E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rent_CF</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Rent_CF]</local-name>
+            <parent-name>[npv_irr_analysis.csv]</parent-name>
+            <remote-alias>Rent_CF</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[npv_irr_analysis.csv_627AD5F84D2549E8A0E165B95E9B53E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Buy_CF</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Buy_CF]</local-name>
+            <parent-name>[npv_irr_analysis.csv]</parent-name>
+            <remote-alias>Buy_CF</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[npv_irr_analysis.csv_627AD5F84D2549E8A0E165B95E9B53E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rent_NPV</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Rent_NPV]</local-name>
+            <parent-name>[npv_irr_analysis.csv]</parent-name>
+            <remote-alias>Rent_NPV</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[npv_irr_analysis.csv_627AD5F84D2549E8A0E165B95E9B53E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Buy_NPV</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Buy_NPV]</local-name>
+            <parent-name>[npv_irr_analysis.csv]</parent-name>
+            <remote-alias>Buy_NPV</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[npv_irr_analysis.csv_627AD5F84D2549E8A0E165B95E9B53E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rent_IRR</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Rent_IRR]</local-name>
+            <parent-name>[npv_irr_analysis.csv]</parent-name>
+            <remote-alias>Rent_IRR</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[npv_irr_analysis.csv_627AD5F84D2549E8A0E165B95E9B53E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Buy_IRR</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Buy_IRR]</local-name>
+            <parent-name>[npv_irr_analysis.csv]</parent-name>
+            <remote-alias>Buy_IRR</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[npv_irr_analysis.csv_627AD5F84D2549E8A0E165B95E9B53E9]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Buy CF' datatype='real' name='[Buy_CF]' role='measure' type='quantitative' />
+      <column caption='Buy IRR' datatype='real' name='[Buy_IRR]' role='measure' type='quantitative' />
+      <column caption='Buy NPV' datatype='real' name='[Buy_NPV]' role='measure' type='quantitative' />
+      <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='Median Gross Rent' datatype='integer' name='[Median_Gross_Rent]' role='measure' type='quantitative' />
+      <column caption='Median Home Value' datatype='integer' name='[Median_Home_Value]' role='measure' type='quantitative' />
+      <column caption='Median Property Tax' datatype='integer' name='[Median_Property_Tax]' role='measure' type='quantitative' />
+      <column caption='Mortgage Rate' datatype='real' name='[Mortgage_Rate]' role='measure' type='quantitative' />
+      <column caption='Owner Cost With Mortgage' datatype='integer' name='[Owner_Cost_With_Mortgage]' role='measure' type='quantitative' />
+      <column caption='Owner Cost Without Mortgage' datatype='integer' name='[Owner_Cost_Without_Mortgage]' role='measure' type='quantitative' />
+      <column caption='Rent CF' datatype='real' name='[Rent_CF]' role='measure' type='quantitative' />
+      <column caption='Rent IRR' datatype='string' name='[Rent_IRR]' role='dimension' type='nominal' />
+      <column caption='Rent NPV' datatype='real' name='[Rent_NPV]' role='measure' type='quantitative' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='npv_irr_analysis.csv' datatype='table' name='[__tableau_internal_object_id__].[npv_irr_analysis.csv_627AD5F84D2549E8A0E165B95E9B53E9]' role='measure' type='quantitative' />
+      <drill-paths>
+        <drill-path name='State, County'>
+          <field>[State]</field>
+          <field>[County]</field>
+        </drill-path>
+      </drill-paths>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='npv_irr_analysis.csv' id='npv_irr_analysis.csv_627AD5F84D2549E8A0E165B95E9B53E9'>
+            <properties context=''>
+              <relation connection='textscan.1ehbkmm1ttu2jm0zz73me0bxqls1' name='npv_irr_analysis.csv' table='[npv_irr_analysis#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='Year' ordinal='0' />
+                  <column datatype='string' name='County' ordinal='1' />
+                  <column datatype='string' name='State' ordinal='2' />
+                  <column datatype='integer' name='Median_Gross_Rent' ordinal='3' />
+                  <column datatype='integer' name='Median_Home_Value' ordinal='4' />
+                  <column datatype='integer' name='Median_Property_Tax' ordinal='5' />
+                  <column datatype='integer' name='Owner_Cost_With_Mortgage' ordinal='6' />
+                  <column datatype='integer' name='Owner_Cost_Without_Mortgage' ordinal='7' />
+                  <column datatype='real' name='Mortgage_Rate' ordinal='8' />
+                  <column datatype='real' name='Rent_CF' ordinal='9' />
+                  <column datatype='real' name='Buy_CF' ordinal='10' />
+                  <column datatype='real' name='Rent_NPV' ordinal='11' />
+                  <column datatype='real' name='Buy_NPV' ordinal='12' />
+                  <column datatype='string' name='Rent_IRR' ordinal='13' />
+                  <column datatype='real' name='Buy_IRR' ordinal='14' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='ACS_nys_housing_acs_2015_2023' inline='true' name='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='ACS_nys_housing_acs_2015_2023' name='textscan.1n63c9i06l1p0w1d5velb0frv7k7'>
+            <connection class='textscan' directory='C:/Users/Fargh/Coding/College/DataScience/csc46000-team-project-housekeeping/CSC460Data/tableauData' filename='ACS_nys_housing_acs_2015_2023.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='localhost' name='mysql.14ckssj0kv6zhe1g04gzt19a5d7w'>
+            <connection class='mysql' dbname='proj_database' odbc-native-protocol='' one-time-sql='' port='3306' server='localhost' source-charset='' username='memyselfi' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1n63c9i06l1p0w1d5velb0frv7k7' name='ACS_nys_housing_acs_2015_2023.csv' table='[ACS_nys_housing_acs_2015_2023#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='Year' ordinal='0' />
+            <column datatype='string' name='County' ordinal='1' />
+            <column datatype='string' name='State' ordinal='2' />
+            <column datatype='integer' name='Median_Gross_Rent' ordinal='3' />
+            <column datatype='integer' name='Median_Home_Value' ordinal='4' />
+            <column datatype='integer' name='Median_Property_Tax' ordinal='5' />
+            <column datatype='integer' name='Owner_Cost_With_Mortgage' ordinal='6' />
+            <column datatype='integer' name='Owner_Cost_Without_Mortgage' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[ACS_nys_housing_acs_2015_2023.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[ACS_nys_housing_acs_2015_2023.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ACS_nys_housing_acs_2015_2023.csv_C7145931E34E4A19B306C8C3E9950DB5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>County</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[County]</local-name>
+            <parent-name>[ACS_nys_housing_acs_2015_2023.csv]</parent-name>
+            <remote-alias>County</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[ACS_nys_housing_acs_2015_2023.csv_C7145931E34E4A19B306C8C3E9950DB5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[ACS_nys_housing_acs_2015_2023.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[ACS_nys_housing_acs_2015_2023.csv_C7145931E34E4A19B306C8C3E9950DB5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Median_Gross_Rent</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Median_Gross_Rent]</local-name>
+            <parent-name>[ACS_nys_housing_acs_2015_2023.csv]</parent-name>
+            <remote-alias>Median_Gross_Rent</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ACS_nys_housing_acs_2015_2023.csv_C7145931E34E4A19B306C8C3E9950DB5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Median_Home_Value</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Median_Home_Value]</local-name>
+            <parent-name>[ACS_nys_housing_acs_2015_2023.csv]</parent-name>
+            <remote-alias>Median_Home_Value</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ACS_nys_housing_acs_2015_2023.csv_C7145931E34E4A19B306C8C3E9950DB5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Median_Property_Tax</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Median_Property_Tax]</local-name>
+            <parent-name>[ACS_nys_housing_acs_2015_2023.csv]</parent-name>
+            <remote-alias>Median_Property_Tax</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ACS_nys_housing_acs_2015_2023.csv_C7145931E34E4A19B306C8C3E9950DB5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Owner_Cost_With_Mortgage</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Owner_Cost_With_Mortgage]</local-name>
+            <parent-name>[ACS_nys_housing_acs_2015_2023.csv]</parent-name>
+            <remote-alias>Owner_Cost_With_Mortgage</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ACS_nys_housing_acs_2015_2023.csv_C7145931E34E4A19B306C8C3E9950DB5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Owner_Cost_Without_Mortgage</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Owner_Cost_Without_Mortgage]</local-name>
+            <parent-name>[ACS_nys_housing_acs_2015_2023.csv]</parent-name>
+            <remote-alias>Owner_Cost_Without_Mortgage</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ACS_nys_housing_acs_2015_2023.csv_C7145931E34E4A19B306C8C3E9950DB5]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Annual Rent' datatype='integer' name='[Calculation_0124537437036544]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Median_Gross_Rent] * 12' />
+      </column>
+      <column caption='[Years To Buy / Years to Break Even]' datatype='real' name='[Calculation_1465941603196928]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Median_Home_Value] / ([Median_Gross_Rent] * 12)' />
+      </column>
+      <column caption='[Cumulative Rent]' datatype='integer' name='[Calculation_1465941606158337]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Median_Gross_Rent] * 12 * [Year]' />
+      </column>
+      <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+        <semantic-values semantic-role='[Geographical].[Latitude]'>
+          <semantic-value key='&quot;Albany County, New York&quot;' value='42.651800000000001' />
+          <semantic-value key='&quot;Allegany County, New York&quot;' value='42.313000000000002' />
+          <semantic-value key='&quot;Bronx County, New York&quot;' value='40.844799999999999' />
+          <semantic-value key='&quot;Broome County, New York&quot;' value='42.179200000000002' />
+          <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='42.2318' />
+          <semantic-value key='&quot;Cayuga County, New York&quot;' value='42.765500000000003' />
+          <semantic-value key='&quot;Chautauqua County, New York&quot;' value='42.231299999999997' />
+          <semantic-value key='&quot;Chemung County, New York&quot;' value='42.136200000000002' />
+          <semantic-value key='&quot;Chenango County, New York&quot;' value='42.497199999999999' />
+          <semantic-value key='&quot;Clinton County, New York&quot;' value='39.406700000000001' />
+          <semantic-value key='&quot;Columbia County, New York&quot;' value='42.367899999999999' />
+          <semantic-value key='&quot;Cortland County, New York&quot;' value='42.5441' />
+          <semantic-value key='&quot;Delaware County, New York&quot;' value='39.907800000000002' />
+          <semantic-value key='&quot;Dutchess County, New York&quot;' value='41.778399999999998' />
+          <semantic-value key='&quot;Erie County, New York&quot;' value='42.697499999999998' />
+        </semantic-values>
+        <semantic-values semantic-role='[Geographical].[Longitude]'>
+          <semantic-value key='&quot;Albany County, New York&quot;' value='-73.754499999999993' />
+          <semantic-value key='&quot;Allegany County, New York&quot;' value='-78.019499999999994' />
+          <semantic-value key='&quot;Bronx County, New York&quot;' value='-73.864800000000002' />
+          <semantic-value key='&quot;Broome County, New York&quot;' value='-75.853399999999993' />
+          <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='-78.747600000000006' />
+          <semantic-value key='&quot;Cayuga County, New York&quot;' value='-76.5488' />
+          <semantic-value key='&quot;Chautauqua County, New York&quot;' value='-79.560299999999998' />
+          <semantic-value key='&quot;Chemung County, New York&quot;' value='-76.779799999999994' />
+          <semantic-value key='&quot;Chenango County, New York&quot;' value='-75.620800000000003' />
+          <semantic-value key='&quot;Clinton County, New York&quot;' value='-83.847300000000004' />
+          <semantic-value key='&quot;Columbia County, New York&quot;' value='-73.559399999999997' />
+          <semantic-value key='&quot;Cortland County, New York&quot;' value='-75.992800000000003' />
+          <semantic-value key='&quot;Delaware County, New York&quot;' value='-75.387900000000002' />
+          <semantic-value key='&quot;Dutchess County, New York&quot;' value='-73.747799999999998' />
+          <semantic-value key='&quot;Erie County, New York&quot;' value='-78.747600000000006' />
+        </semantic-values>
+      </column>
+      <column caption='Median Gross Rent' datatype='integer' name='[Median_Gross_Rent]' role='measure' type='quantitative' />
+      <column caption='Median Home Value' datatype='integer' name='[Median_Home_Value]' role='measure' type='quantitative' />
+      <column caption='Median Property Tax' datatype='integer' name='[Median_Property_Tax]' role='measure' type='quantitative' />
+      <column caption='Owner Cost With Mortgage' datatype='integer' name='[Owner_Cost_With_Mortgage]' role='measure' type='quantitative' />
+      <column caption='Owner Cost Without Mortgage' datatype='integer' name='[Owner_Cost_Without_Mortgage]' role='measure' type='quantitative' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='integer' name='[Year]' role='dimension' type='ordinal' />
+      <column caption='ACS_nys_housing_acs_2015_2023.csv' datatype='table' name='[__tableau_internal_object_id__].[ACS_nys_housing_acs_2015_2023.csv_C7145931E34E4A19B306C8C3E9950DB5]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_1465941603196928]' derivation='Count' name='[cnt:Calculation_1465941603196928:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_0124537437036544]' derivation='Sum' name='[cum:sum:Calculation_0124537437036544:qk:2]' pivot='key' type='quantitative'>
+        <table-calc aggregation='Sum' ordering-type='CellInPane' type='CumTotal' />
+      </column-instance>
+      <column-instance column='[Calculation_0124537437036544]' derivation='Sum' name='[cum:sum:Calculation_0124537437036544:qk]' pivot='key' type='quantitative'>
+        <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
+      </column-instance>
+      <column-instance column='[Calculation_1465941606158337]' derivation='Sum' name='[cum:sum:Calculation_1465941606158337:qk]' pivot='key' type='quantitative'>
+        <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
+      </column-instance>
+      <column-instance column='[Calculation_0124537437036544]' derivation='Sum' name='[diff:sum:Calculation_0124537437036544:qk]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-type='Rows' type='Difference'>
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Calculation_1465941603196928]' derivation='None' name='[none:Calculation_1465941603196928:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_0124537437036544]' derivation='Sum' name='[sum:Calculation_0124537437036544:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1465941603196928]' derivation='Sum' name='[sum:Calculation_1465941603196928:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1465941606158337]' derivation='Sum' name='[sum:Calculation_1465941606158337:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Median_Gross_Rent]' derivation='Sum' name='[sum:Median_Gross_Rent:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Median_Home_Value]' derivation='Sum' name='[sum:Median_Home_Value:qk]' pivot='key' type='quantitative' />
+      <layout common-percentage='1' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' user-set-layout-v2='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Median_Gross_Rent:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[cum:sum:Calculation_1465941606158337:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Calculation_1465941606158337:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Calculation_1465941603196928:qk]:1&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[cnt:Calculation_1465941603196928:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:Calculation_1465941603196928:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Calculation_1465941603196928:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[cum:sum:Calculation_0124537437036544:qk:2]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[cum:sum:Calculation_0124537437036544:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[diff:sum:Calculation_0124537437036544:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Calculation_0124537437036544:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Median_Home_Value:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:County:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Chenango&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Montgomery&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Seneca&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Albany&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Hamilton&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Queens&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Wyoming&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%many-values%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Cattaraugus&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Lewis&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Saratoga&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Delaware&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Oneida&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Sullivan&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Clinton&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Nassau&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;St. Lawrence&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Cayuga&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Livingston&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Schenectady&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Genesee&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Otsego&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Wayne&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Allegany&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Herkimer&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Rensselaer&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Yates&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Franklin&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Orleans&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Warren&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Chautauqua&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Madison&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Schoharie&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Dutchess&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Onondaga&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Tioga&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Erie&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Ontario&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Tompkins&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Fulton&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Oswego&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Washington&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Greene&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Putnam&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Westchester&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Columbia&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;New York&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Steuben&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Chemung&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Monroe&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Schuyler&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Bronx&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Jefferson&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Richmond&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Essex&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Orange&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Ulster&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Cortland&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Niagara&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Suffolk&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Broome&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Kings&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Rockland&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+        <semantic-value key='[County].[Name]' value='%null%' />
+        <semantic-value key='[State].[Name]' value='&quot;New York&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='ACS_nys_housing_acs_2015_2023.csv' id='ACS_nys_housing_acs_2015_2023.csv_C7145931E34E4A19B306C8C3E9950DB5'>
+            <properties context=''>
+              <relation connection='textscan.1n63c9i06l1p0w1d5velb0frv7k7' name='ACS_nys_housing_acs_2015_2023.csv' table='[ACS_nys_housing_acs_2015_2023#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='Year' ordinal='0' />
+                  <column datatype='string' name='County' ordinal='1' />
+                  <column datatype='string' name='State' ordinal='2' />
+                  <column datatype='integer' name='Median_Gross_Rent' ordinal='3' />
+                  <column datatype='integer' name='Median_Home_Value' ordinal='4' />
+                  <column datatype='integer' name='Median_Property_Tax' ordinal='5' />
+                  <column datatype='integer' name='Owner_Cost_With_Mortgage' ordinal='6' />
+                  <column datatype='integer' name='Owner_Cost_Without_Mortgage' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <datasource-relationships>
+    <datasource-relationship source='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg' target='federated.1l10kvr0090v2y13b60dj11jbi31'>
+      <column-mapping />
+    </datasource-relationship>
+  </datasource-relationships>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='ACS Median Gross Rent'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ACS_nys_housing_acs_2015_2023' name='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg'>
+            <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+              <semantic-values semantic-role='[Geographical].[Latitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='42.651800000000001' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='42.313000000000002' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='40.844799999999999' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='42.179200000000002' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='42.2318' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='42.765500000000003' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='42.231299999999997' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='42.136200000000002' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='42.497199999999999' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='39.406700000000001' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='42.367899999999999' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='42.5441' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='39.907800000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='41.778399999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='42.697499999999998' />
+              </semantic-values>
+              <semantic-values semantic-role='[Geographical].[Longitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='-73.754499999999993' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='-78.019499999999994' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='-73.864800000000002' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='-75.853399999999993' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='-78.747600000000006' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='-76.5488' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='-79.560299999999998' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='-76.779799999999994' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='-75.620800000000003' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='-83.847300000000004' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='-73.559399999999997' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='-75.992800000000003' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='-75.387900000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='-73.747799999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='-78.747600000000006' />
+              </semantic-values>
+            </column>
+            <column caption='Median Gross Rent' datatype='integer' name='[Median_Gross_Rent]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Median_Gross_Rent]' derivation='Sum' name='[sum:Median_Gross_Rent:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:Year:qk]' field-type='quantitative' max='2023' min='2015' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Median_Gross_Rent:qk]</rows>
+        <cols>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{22D0E46F-BBF3-4A5D-9ACD-A53372DA7718}' />
+    </worksheet>
+    <worksheet name='ACS Median Home Value'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ACS_nys_housing_acs_2015_2023' name='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg'>
+            <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+              <semantic-values semantic-role='[Geographical].[Latitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='42.651800000000001' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='42.313000000000002' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='40.844799999999999' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='42.179200000000002' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='42.2318' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='42.765500000000003' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='42.231299999999997' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='42.136200000000002' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='42.497199999999999' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='39.406700000000001' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='42.367899999999999' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='42.5441' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='39.907800000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='41.778399999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='42.697499999999998' />
+              </semantic-values>
+              <semantic-values semantic-role='[Geographical].[Longitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='-73.754499999999993' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='-78.019499999999994' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='-73.864800000000002' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='-75.853399999999993' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='-78.747600000000006' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='-76.5488' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='-79.560299999999998' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='-76.779799999999994' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='-75.620800000000003' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='-83.847300000000004' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='-73.559399999999997' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='-75.992800000000003' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='-75.387900000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='-73.747799999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='-78.747600000000006' />
+              </semantic-values>
+            </column>
+            <column caption='Median Home Value' datatype='integer' name='[Median_Home_Value]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Median_Home_Value]' derivation='Sum' name='[sum:Median_Home_Value:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:Year:qk]' field-type='quantitative' max='2027' min='2015' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Median_Home_Value:qk]' field-type='quantitative' max='1731024' min='-47792' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Median_Home_Value:qk]</rows>
+        <cols>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{54A53A21-B88F-4581-89C7-C06DD8119349}' />
+    </worksheet>
+    <worksheet name='ACS Median Home Value (Heatmap)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ACS_nys_housing_acs_2015_2023' name='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg'>
+            <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+              <semantic-values semantic-role='[Geographical].[Latitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='42.651800000000001' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='42.313000000000002' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='40.844799999999999' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='42.179200000000002' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='42.2318' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='42.765500000000003' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='42.231299999999997' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='42.136200000000002' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='42.497199999999999' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='39.406700000000001' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='42.367899999999999' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='42.5441' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='39.907800000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='41.778399999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='42.697499999999998' />
+              </semantic-values>
+              <semantic-values semantic-role='[Geographical].[Longitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='-73.754499999999993' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='-78.019499999999994' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='-73.864800000000002' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='-75.853399999999993' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='-78.747600000000006' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='-76.5488' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='-79.560299999999998' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='-76.779799999999994' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='-75.620800000000003' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='-83.847300000000004' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='-73.559399999999997' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='-75.992800000000003' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='-75.387900000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='-73.747799999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='-78.747600000000006' />
+              </semantic-values>
+            </column>
+            <column caption='Median Home Value' datatype='integer' name='[Median_Home_Value]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Median_Home_Value]' derivation='Sum' name='[sum:Median_Home_Value:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:State:nk]'>
+            <groupfilter function='member' level='[none:State:nk]' member='&quot;New York&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:State:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[Longitude (generated)]' field-type='quantitative' max='-7628499.8031945173' min='-9072057.1510151159' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[Latitude (generated)]' field-type='quantitative' max='5643352.5007248223' min='4892819.6394522442' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='dark' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]' />
+              <color column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Median_Home_Value:qk]' />
+              <geometry column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[Latitude (generated)]</rows>
+        <cols>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{43834B62-4DB6-416C-A433-2C0B10FFCAE9}' />
+    </worksheet>
+    <worksheet name='ACS Median Home Value (Heatmap) (City-Focus)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ACS_nys_housing_acs_2015_2023' name='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg'>
+            <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+              <semantic-values semantic-role='[Geographical].[Latitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='42.651800000000001' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='42.313000000000002' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='40.844799999999999' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='42.179200000000002' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='42.2318' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='42.765500000000003' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='42.231299999999997' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='42.136200000000002' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='42.497199999999999' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='39.406700000000001' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='42.367899999999999' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='42.5441' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='39.907800000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='41.778399999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='42.697499999999998' />
+              </semantic-values>
+              <semantic-values semantic-role='[Geographical].[Longitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='-73.754499999999993' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='-78.019499999999994' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='-73.864800000000002' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='-75.853399999999993' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='-78.747600000000006' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='-76.5488' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='-79.560299999999998' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='-76.779799999999994' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='-75.620800000000003' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='-83.847300000000004' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='-73.559399999999997' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='-75.992800000000003' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='-75.387900000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='-73.747799999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='-78.747600000000006' />
+              </semantic-values>
+            </column>
+            <column caption='Median Home Value' datatype='integer' name='[Median_Home_Value]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Median_Home_Value]' derivation='Sum' name='[sum:Median_Home_Value:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:County:nk]' member='&quot;Bronx&quot;' />
+              <groupfilter function='member' level='[none:County:nk]' member='&quot;Kings&quot;' />
+              <groupfilter function='member' level='[none:County:nk]' member='&quot;New York&quot;' />
+              <groupfilter function='member' level='[none:County:nk]' member='&quot;Queens&quot;' />
+              <groupfilter function='member' level='[none:County:nk]' member='&quot;Richmond&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:State:nk]'>
+            <groupfilter function='member' level='[none:State:nk]' member='&quot;New York&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:State:nk]</column>
+            <column>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[Longitude (generated)]' field-type='quantitative' max='-8164365.6408981299' min='-8294748.572119629' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[Latitude (generated)]' field-type='quantitative' max='5002161.5446863929' min='4934372.9843091313' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='dark' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]' />
+              <color column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Median_Home_Value:qk]' />
+              <geometry column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[Latitude (generated)]</rows>
+        <cols>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{B41F1D61-D2B0-4E4C-A00A-CF55F602C932}' />
+    </worksheet>
+    <worksheet name='ACS Median Property Tax'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ACS_nys_housing_acs_2015_2023' name='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg'>
+            <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+              <semantic-values semantic-role='[Geographical].[Latitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='42.651800000000001' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='42.313000000000002' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='40.844799999999999' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='42.179200000000002' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='42.2318' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='42.765500000000003' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='42.231299999999997' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='42.136200000000002' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='42.497199999999999' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='39.406700000000001' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='42.367899999999999' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='42.5441' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='39.907800000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='41.778399999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='42.697499999999998' />
+              </semantic-values>
+              <semantic-values semantic-role='[Geographical].[Longitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='-73.754499999999993' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='-78.019499999999994' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='-73.864800000000002' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='-75.853399999999993' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='-78.747600000000006' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='-76.5488' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='-79.560299999999998' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='-76.779799999999994' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='-75.620800000000003' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='-83.847300000000004' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='-73.559399999999997' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='-75.992800000000003' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='-75.387900000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='-73.747799999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='-78.747600000000006' />
+              </semantic-values>
+            </column>
+            <column caption='Median Property Tax' datatype='integer' name='[Median_Property_Tax]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Median_Property_Tax]' derivation='Sum' name='[sum:Median_Property_Tax:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:Year:qk]' field-type='quantitative' max='2023' min='2015' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Median_Property_Tax:qk]</rows>
+        <cols>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{A40CCFB4-6AEA-4E36-99A5-EC370AC858A2}' />
+    </worksheet>
+    <worksheet name='ACS Owner Cost w. Mortgage'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ACS_nys_housing_acs_2015_2023' name='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg'>
+            <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+              <semantic-values semantic-role='[Geographical].[Latitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='42.651800000000001' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='42.313000000000002' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='40.844799999999999' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='42.179200000000002' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='42.2318' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='42.765500000000003' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='42.231299999999997' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='42.136200000000002' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='42.497199999999999' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='39.406700000000001' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='42.367899999999999' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='42.5441' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='39.907800000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='41.778399999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='42.697499999999998' />
+              </semantic-values>
+              <semantic-values semantic-role='[Geographical].[Longitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='-73.754499999999993' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='-78.019499999999994' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='-73.864800000000002' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='-75.853399999999993' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='-78.747600000000006' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='-76.5488' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='-79.560299999999998' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='-76.779799999999994' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='-75.620800000000003' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='-83.847300000000004' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='-73.559399999999997' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='-75.992800000000003' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='-75.387900000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='-73.747799999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='-78.747600000000006' />
+              </semantic-values>
+            </column>
+            <column caption='Owner Cost With Mortgage' datatype='integer' name='[Owner_Cost_With_Mortgage]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Owner_Cost_With_Mortgage]' derivation='Sum' name='[sum:Owner_Cost_With_Mortgage:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:Year:qk]' field-type='quantitative' max='2023' min='2015' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Owner_Cost_With_Mortgage:qk]</rows>
+        <cols>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{4178DB60-BEB8-4B3A-AD5C-62A4CC046EA5}' />
+    </worksheet>
+    <worksheet name='ACS Owner Cost w/o. Mortgage'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ACS_nys_housing_acs_2015_2023' name='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg'>
+            <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+              <semantic-values semantic-role='[Geographical].[Latitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='42.651800000000001' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='42.313000000000002' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='40.844799999999999' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='42.179200000000002' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='42.2318' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='42.765500000000003' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='42.231299999999997' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='42.136200000000002' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='42.497199999999999' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='39.406700000000001' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='42.367899999999999' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='42.5441' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='39.907800000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='41.778399999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='42.697499999999998' />
+              </semantic-values>
+              <semantic-values semantic-role='[Geographical].[Longitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='-73.754499999999993' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='-78.019499999999994' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='-73.864800000000002' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='-75.853399999999993' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='-78.747600000000006' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='-76.5488' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='-79.560299999999998' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='-76.779799999999994' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='-75.620800000000003' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='-83.847300000000004' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='-73.559399999999997' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='-75.992800000000003' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='-75.387900000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='-73.747799999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='-78.747600000000006' />
+              </semantic-values>
+            </column>
+            <column caption='Owner Cost Without Mortgage' datatype='integer' name='[Owner_Cost_Without_Mortgage]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Owner_Cost_Without_Mortgage]' derivation='Sum' name='[sum:Owner_Cost_Without_Mortgage:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:Year:qk]' field-type='quantitative' max='2023' min='2015' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Owner_Cost_Without_Mortgage:qk]</rows>
+        <cols>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:Year:qk]</cols>
+      </table>
+      <simple-id uuid='{BB2072F4-DEC7-4482-86EC-B8DAC546CF14}' />
+    </worksheet>
+    <worksheet name='Breakeven'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ACS_nys_housing_acs_2015_2023' name='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg' />
+            <datasource caption='years' name='federated.1l10kvr0090v2y13b60dj11jbi31' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg'>
+            <column caption='[Cumulative Rent]' datatype='integer' name='[Calculation_1465941606158337]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Median_Gross_Rent] * 12 * [Year]' />
+            </column>
+            <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+              <semantic-values semantic-role='[Geographical].[Latitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='42.651800000000001' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='42.313000000000002' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='40.844799999999999' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='42.179200000000002' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='42.2318' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='42.765500000000003' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='42.231299999999997' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='42.136200000000002' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='42.497199999999999' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='39.406700000000001' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='42.367899999999999' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='42.5441' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='39.907800000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='41.778399999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='42.697499999999998' />
+              </semantic-values>
+              <semantic-values semantic-role='[Geographical].[Longitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='-73.754499999999993' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='-78.019499999999994' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='-73.864800000000002' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='-75.853399999999993' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='-78.747600000000006' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='-76.5488' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='-79.560299999999998' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='-76.779799999999994' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='-75.620800000000003' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='-83.847300000000004' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='-73.559399999999997' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='-75.992800000000003' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='-75.387900000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='-73.747799999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='-78.747600000000006' />
+              </semantic-values>
+            </column>
+            <column caption='Median Gross Rent' datatype='integer' name='[Median_Gross_Rent]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_1465941606158337]' derivation='Sum' name='[cum:sum:Calculation_1465941606158337:qk]' pivot='key' type='quantitative'>
+              <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
+            </column-instance>
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1l10kvr0090v2y13b60dj11jbi31'>
+            <column-instance column='[__tableau_internal_object_id__].[years.csv_2839B7BB984046B9B4226837E80A24A5]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:years.csv_2839B7BB984046B9B4226837E80A24A5:qk]' pivot='key' type='quantitative' />
+            <column caption='years.csv' datatype='table' name='[__tableau_internal_object_id__].[years.csv_2839B7BB984046B9B4226837E80A24A5]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]'>
+            <groupfilter function='member' level='[none:County:nk]' member='&quot;Albany&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]</column>
+          </slices>
+          <aggregation value='false' />
+        </view>
+        <style />
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[cum:sum:Calculation_1465941606158337:qk]</rows>
+        <cols>[federated.1l10kvr0090v2y13b60dj11jbi31].[__tableau_internal_object_id__].[cnt:years.csv_2839B7BB984046B9B4226837E80A24A5:qk]</cols>
+      </table>
+      <simple-id uuid='{A10F1026-FCE0-43AC-BE66-4138C3A41C34}' />
+    </worksheet>
+    <worksheet name='NPV IRR ANalysis 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='npv_irr_analysis' name='federated.13ldc8t1w14b6k1c0gbxb0cqtvjv' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.13ldc8t1w14b6k1c0gbxb0cqtvjv'>
+            <column caption='Buy IRR' datatype='real' name='[Buy_IRR]' role='measure' type='quantitative' />
+            <column caption='Buy NPV' datatype='real' name='[Buy_NPV]' role='measure' type='quantitative' />
+            <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Buy_IRR]' derivation='Sum' name='[sum:Buy_IRR:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Buy_NPV]' derivation='Sum' name='[sum:Buy_NPV:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[Longitude (generated)]' field-type='quantitative' max='-7555405.9627051204' min='-9168407.5203821082' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[Latitude (generated)]' field-type='quantitative' max='5544912.2607793845' min='4614586.4356289674' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[sum:Buy_NPV:qk]' palette='red_blue_white_diverging_10_0' reverse='true' type='interpolated' />
+            <encoding attr='color' field='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[sum:Buy_IRR:qk]' palette='red_blue_white_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[sum:Buy_IRR:qk]' />
+              <text column='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[sum:Buy_NPV:qk]' />
+              <text column='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[sum:Buy_IRR:qk]' />
+              <lod column='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[none:State:nk]' />
+              <lod column='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[none:County:nk]' />
+              <geometry column='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[Latitude (generated)]</rows>
+        <cols>[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{2B1943A6-3FD5-40F2-AD61-2C5BC0F36348}' />
+    </worksheet>
+    <worksheet name='NPV IRR ANalysis 1 (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='npv_irr_analysis' name='federated.13ldc8t1w14b6k1c0gbxb0cqtvjv' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.13ldc8t1w14b6k1c0gbxb0cqtvjv'>
+            <column caption='Buy IRR' datatype='real' name='[Buy_IRR]' role='measure' type='quantitative' />
+            <column caption='Buy NPV' datatype='real' name='[Buy_NPV]' role='measure' type='quantitative' />
+            <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Buy_IRR]' derivation='Sum' name='[sum:Buy_IRR:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Buy_NPV]' derivation='Sum' name='[sum:Buy_NPV:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[Longitude (generated)]' field-type='quantitative' max='-7363696.2227465911' min='-8952401.9703204576' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[Latitude (generated)]' field-type='quantitative' max='5581694.7175315348' min='4665381.9102076106' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[sum:Buy_NPV:qk]' palette='red_blue_white_diverging_10_0' reverse='true' type='interpolated' />
+            <encoding attr='color' field='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[sum:Buy_IRR:qk]' palette='red_blue_white_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[sum:Buy_NPV:qk]' />
+              <text column='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[sum:Buy_NPV:qk]' />
+              <text column='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[sum:Buy_IRR:qk]' />
+              <lod column='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[none:State:nk]' />
+              <lod column='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[none:County:nk]' />
+              <geometry column='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[Latitude (generated)]</rows>
+        <cols>[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{3F058BD5-6F7E-4089-BCD1-B23F8ADB147D}' />
+    </worksheet>
+    <worksheet name='Sheet 10'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cash_flows_for_tableau' name='federated.19cdbq61a7u45117fkvng1x26233' />
+            <datasource caption='county_buy_vs_rent_summary' name='federated.01jn0sw07ikci0103pci819uddcx' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.01jn0sw07ikci0103pci819uddcx'>
+            <column caption='Buy NPV' datatype='real' name='[Buy_NPV]' role='measure' type='quantitative' />
+            <column-instance column='[Buy_NPV]' derivation='Sum' name='[sum:Buy_NPV:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.19cdbq61a7u45117fkvng1x26233'>
+            <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column datatype='integer' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.19cdbq61a7u45117fkvng1x26233].[none:Year:ok]'>
+            <groupfilter function='level-members' level='[none:Year:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.19cdbq61a7u45117fkvng1x26233].[none:Year:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.19cdbq61a7u45117fkvng1x26233].[Longitude (generated)]' field-type='quantitative' max='-8015701.0285851592' min='-8455770.840917211' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.19cdbq61a7u45117fkvng1x26233].[Latitude (generated)]' field-type='quantitative' max='5055412.2532837745' min='4801594.5744768037' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' center='0.0' field='[federated.01jn0sw07ikci0103pci819uddcx].[sum:Buy_NPV:qk]' palette='red_blue_white_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.01jn0sw07ikci0103pci819uddcx].[sum:Buy_NPV:qk]' />
+              <lod column='[federated.19cdbq61a7u45117fkvng1x26233].[none:State:nk]' />
+              <lod column='[federated.19cdbq61a7u45117fkvng1x26233].[none:County:nk]' />
+              <geometry column='[federated.19cdbq61a7u45117fkvng1x26233].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.19cdbq61a7u45117fkvng1x26233].[Latitude (generated)]</rows>
+        <cols>[federated.19cdbq61a7u45117fkvng1x26233].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{E9A6F502-91DC-42BB-8342-0D40A5D8878D}' />
+    </worksheet>
+    <worksheet name='Years To Buy (BarChart)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ACS_nys_housing_acs_2015_2023' name='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg'>
+            <column caption='[Years To Buy / Years to Break Even]' datatype='real' name='[Calculation_1465941603196928]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Median_Home_Value] / ([Median_Gross_Rent] * 12)' />
+            </column>
+            <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+              <semantic-values semantic-role='[Geographical].[Latitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='42.651800000000001' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='42.313000000000002' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='40.844799999999999' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='42.179200000000002' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='42.2318' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='42.765500000000003' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='42.231299999999997' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='42.136200000000002' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='42.497199999999999' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='39.406700000000001' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='42.367899999999999' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='42.5441' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='39.907800000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='41.778399999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='42.697499999999998' />
+              </semantic-values>
+              <semantic-values semantic-role='[Geographical].[Longitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='-73.754499999999993' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='-78.019499999999994' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='-73.864800000000002' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='-75.853399999999993' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='-78.747600000000006' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='-76.5488' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='-79.560299999999998' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='-76.779799999999994' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='-75.620800000000003' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='-83.847300000000004' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='-73.559399999999997' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='-75.992800000000003' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='-75.387900000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='-73.747799999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='-78.747600000000006' />
+              </semantic-values>
+            </column>
+            <column caption='Median Gross Rent' datatype='integer' name='[Median_Gross_Rent]' role='measure' type='quantitative' />
+            <column caption='Median Home Value' datatype='integer' name='[Median_Home_Value]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1465941603196928]' derivation='Sum' name='[sum:Calculation_1465941603196928:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]'>
+            <groupfilter function='level-members' level='[none:County:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:Year:ok]'>
+            <groupfilter function='member' level='[none:Year:ok]' member='2023' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:Year:ok]</column>
+            <column>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Calculation_1465941603196928:qk]' palette='blue_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]</rows>
+        <cols>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Calculation_1465941603196928:qk]</cols>
+      </table>
+      <simple-id uuid='{46100CD7-FF67-4015-9607-12C50C9B7F28}' />
+    </worksheet>
+    <worksheet name='Years To Buy (Map)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ACS_nys_housing_acs_2015_2023' name='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1c9vo4z1v8lj9g1cvtarq0swvzyg'>
+            <column caption='[Years To Buy / Years to Break Even]' datatype='real' name='[Calculation_1465941603196928]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Median_Home_Value] / ([Median_Gross_Rent] * 12)' />
+            </column>
+            <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+              <semantic-values semantic-role='[Geographical].[Latitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='42.651800000000001' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='42.313000000000002' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='40.844799999999999' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='42.179200000000002' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='42.2318' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='42.765500000000003' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='42.231299999999997' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='42.136200000000002' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='42.497199999999999' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='39.406700000000001' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='42.367899999999999' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='42.5441' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='39.907800000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='41.778399999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='42.697499999999998' />
+              </semantic-values>
+              <semantic-values semantic-role='[Geographical].[Longitude]'>
+                <semantic-value key='&quot;Albany County, New York&quot;' value='-73.754499999999993' />
+                <semantic-value key='&quot;Allegany County, New York&quot;' value='-78.019499999999994' />
+                <semantic-value key='&quot;Bronx County, New York&quot;' value='-73.864800000000002' />
+                <semantic-value key='&quot;Broome County, New York&quot;' value='-75.853399999999993' />
+                <semantic-value key='&quot;Cattaraugus County, New York&quot;' value='-78.747600000000006' />
+                <semantic-value key='&quot;Cayuga County, New York&quot;' value='-76.5488' />
+                <semantic-value key='&quot;Chautauqua County, New York&quot;' value='-79.560299999999998' />
+                <semantic-value key='&quot;Chemung County, New York&quot;' value='-76.779799999999994' />
+                <semantic-value key='&quot;Chenango County, New York&quot;' value='-75.620800000000003' />
+                <semantic-value key='&quot;Clinton County, New York&quot;' value='-83.847300000000004' />
+                <semantic-value key='&quot;Columbia County, New York&quot;' value='-73.559399999999997' />
+                <semantic-value key='&quot;Cortland County, New York&quot;' value='-75.992800000000003' />
+                <semantic-value key='&quot;Delaware County, New York&quot;' value='-75.387900000000002' />
+                <semantic-value key='&quot;Dutchess County, New York&quot;' value='-73.747799999999998' />
+                <semantic-value key='&quot;Erie County, New York&quot;' value='-78.747600000000006' />
+              </semantic-values>
+            </column>
+            <column caption='Median Gross Rent' datatype='integer' name='[Median_Gross_Rent]' role='measure' type='quantitative' />
+            <column caption='Median Home Value' datatype='integer' name='[Median_Home_Value]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1465941603196928]' derivation='Sum' name='[sum:Calculation_1465941603196928:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Median_Gross_Rent]' derivation='Sum' name='[sum:Median_Gross_Rent:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Median_Home_Value]' derivation='Sum' name='[sum:Median_Home_Value:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:Year:ok]'>
+            <groupfilter function='member' level='[none:Year:ok]' member='2023' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:Year:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Calculation_1465941603196928:qk]' palette='blue_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Calculation_1465941603196928:qk]' />
+              <lod column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]' />
+              <lod column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Median_Gross_Rent:qk]' />
+              <lod column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Median_Home_Value:qk]' />
+              <size column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Calculation_1465941603196928:qk]' />
+              <geometry column='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[Latitude (generated)]</rows>
+        <cols>[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{658794B0-57FF-430D-964F-7DA7F01443F8}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='193'>
+    <window class='worksheet' maximized='true' name='ACS Median Gross Rent' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{99AACD44-BF00-4959-8064-3EAA0160C90D}' />
+    </window>
+    <window class='worksheet' name='ACS Median Home Value' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{1081A304-2B0D-4E7F-977B-432A3AADE91A}' />
+    </window>
+    <window class='worksheet' name='ACS Median Property Tax' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{B8A41E51-2363-4949-BFBD-BE2A89AF62E5}' />
+    </window>
+    <window class='worksheet' name='ACS Owner Cost w. Mortgage' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{40747604-AED1-4E3E-A6E4-84B938CBCFD2}' />
+    </window>
+    <window class='worksheet' name='ACS Owner Cost w/o. Mortgage' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{920D359D-F1E2-4BE9-8146-25386620A2AF}' />
+    </window>
+    <window class='worksheet' name='ACS Median Home Value (Heatmap)' tab-color='#f66273'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{4D99E3C4-55A5-41ED-9786-C79476EE8B53}' />
+    </window>
+    <window class='worksheet' name='ACS Median Home Value (Heatmap) (City-Focus)' tab-color='#f66273'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{67F0BEE2-585D-4E4F-A2AB-5469004F24F9}' />
+    </window>
+    <window class='worksheet' name='NPV IRR ANalysis 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[sum:Buy_IRR:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{07A8044B-1BDD-41A4-96FF-07669DE875F3}' />
+    </window>
+    <window class='worksheet' name='NPV IRR ANalysis 1 (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.13ldc8t1w14b6k1c0gbxb0cqtvjv].[sum:Buy_NPV:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{057D2513-64D8-4EB7-A2F9-8DB3A0B55EC4}' />
+    </window>
+    <window class='worksheet' name='Sheet 10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[federated.19cdbq61a7u45117fkvng1x26233].[none:Year:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.01jn0sw07ikci0103pci819uddcx].[sum:Buy_NPV:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{26514672-6C30-4187-BCD5-A0D2C9DC7777}' />
+    </window>
+    <window class='worksheet' name='Years To Buy (Map)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:Year:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Calculation_1465941603196928:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[sum:Calculation_1465941603196928:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9A46ACA7-2EAF-48C4-BE73-87D5BAC16F80}' />
+    </window>
+    <window class='worksheet' name='Years To Buy (BarChart)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='radiolist' param='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]' type='filter' />
+            <card mode='slider' param='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:Year:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5CAC73C4-8323-49D1-AFF2-D929B12796EE}' />
+    </window>
+    <window class='worksheet' name='Breakeven'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[none:County:nk]' type='filter' />
+            <card pane-specification-id='3' param='[federated.1c9vo4z1v8lj9g1cvtarq0swvzyg].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{444A1992-96EC-42BA-A701-CB27EAF787D6}' />
+    </window>
+  </windows>
+</workbook>
