@@ -1,0 +1,52 @@
+County,Forecast_Years,NPV_Rent,NPV_Buy,Difference_BuyMinusRent,Better_Option,Breakeven_Year
+Albany,8,121284.66,120248.71,-1035.94,Buying,8
+Bronx,8,124338.59,126505.75,2167.16,Renting,None (within forecast)
+Broome,8,71874.99,60311.06,-11563.92,Buying,1
+Cattaraugus,8,60129.35,51089.02,-9040.33,Buying,4
+Cayuga,8,72751.26,94980.72,22229.46,Renting,None (within forecast)
+Chautauqua,8,58587.2,75286.91,16699.7,Renting,None (within forecast)
+Chemung,8,86015.6,41184.86,-44830.74,Buying,1
+Clinton,8,67905.34,67044.01,-861.33,Buying,8
+Columbia,8,97684.55,187540.7,89856.15,Renting,None (within forecast)
+Cortland,8,72545.43,63021.92,-9523.51,Buying,4
+Dutchess,8,150888.89,128992.87,-21896.03,Buying,4
+Erie,8,93871.06,92987.74,-883.33,Buying,8
+Franklin,8,80813.26,39606.12,-41207.14,Buying,1
+Fulton,8,74427.12,66937.73,-7489.39,Buying,5
+Genesee,8,86347.32,65206.47,-21140.85,Buying,1
+Herkimer,8,62847.24,70030.13,7182.89,Renting,None (within forecast)
+Jefferson,8,108203.72,79183.19,-29020.53,Buying,1
+Kings,8,169253.2,322892.34,153639.14,Renting,None (within forecast)
+Livingston,8,68330.63,84049.67,15719.04,Renting,None (within forecast)
+Madison,8,80969.68,69570.8,-11398.87,Buying,4
+Monroe,8,92024.96,76931.37,-15093.59,Buying,4
+Montgomery,8,63243.19,75958.43,12715.24,Renting,None (within forecast)
+Nassau,8,192183.3,187166.68,-5016.62,Buying,8
+New York,8,227256.32,297011.74,69755.41,Renting,None (within forecast)
+Niagara,8,83052.65,86208.48,3155.82,Renting,None (within forecast)
+Oneida,8,78662.72,78483.12,-179.6,Buying,8
+Onondaga,8,101067.73,100770.15,-297.58,Buying,8
+Ontario,8,89471.55,102462.07,12990.52,Renting,None (within forecast)
+Orange,8,129063.48,118639.41,-10424.08,Buying,6
+Orleans,8,68850.15,72496.25,3646.1,Renting,None (within forecast)
+Oswego,8,82052.58,65806.56,-16246.01,Buying,1
+Otsego,8,78015.06,63435.31,-14579.75,Buying,1
+Putnam,8,184135.16,175852.41,-8282.75,Buying,8
+Queens,8,181166.58,159842.0,-21324.59,Buying,5
+Rensselaer,8,105292.22,97976.89,-7315.34,Buying,6
+Richmond,8,159694.79,134896.26,-24798.53,Buying,4
+Rockland,8,154821.07,205440.55,50619.48,Renting,None (within forecast)
+Saratoga,8,115676.6,133182.35,17505.75,Renting,None (within forecast)
+Schenectady,8,102686.99,95755.77,-6931.22,Buying,6
+Schoharie,8,78220.39,84222.21,6001.82,Renting,None (within forecast)
+Seneca,8,75028.39,103362.74,28334.35,Renting,None (within forecast)
+Steuben,8,85992.85,52048.81,-33944.04,Buying,1
+Suffolk,8,189257.03,204618.44,15361.41,Renting,None (within forecast)
+Tioga,8,77470.29,58695.53,-18774.76,Buying,1
+Tompkins,8,114280.21,108487.37,-5792.85,Buying,7
+Ulster,8,118034.12,127484.14,9450.02,Renting,None (within forecast)
+Warren,8,101045.82,101295.59,249.77,Renting,None (within forecast)
+Washington,8,79089.07,88436.69,9347.62,Renting,None (within forecast)
+Wayne,8,78944.75,79263.15,318.4,Renting,None (within forecast)
+Westchester,8,155579.04,104371.55,-51207.49,Buying,1
+Yates,8,42821.92,126952.07,84130.15,Renting,None (within forecast)
