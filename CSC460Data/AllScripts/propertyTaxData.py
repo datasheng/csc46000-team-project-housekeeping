@@ -28,7 +28,7 @@ nys_counties = ["Albany", "Allegany", "Bronx", "Broome", "Cattaraugus", "Cayuga"
 allRequests=[]
 for link in links:
     r=requests.get(link)
-    html_doc=BeautifulSoup(r.text)
+    html_doc=BeautifulSoup(r.text, 'html.parser')
     allRequests.append(html_doc)
 
 amountPerYear=[]

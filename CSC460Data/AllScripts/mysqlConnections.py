@@ -61,6 +61,7 @@ df5=pd.read_csv('./AllResults/RentData.csv')
 df6=pd.read_csv('./AllResults/rent_forecasts.csv')
 df7=pd.read_csv('./AllResults/mortgageRates.csv')
 df8=pd.read_csv('./tableauData/ACS_nys_housing_acs_2015_2023.csv')
+df9=pd.read_csv('./AllResults/npv_results.csv')
 
 df1.to_sql('Consumption_Data_Per_County', con=engine, if_exists='replace', index='id')
 df2.to_sql('Consumption_Data_Per_Year', con=engine, if_exists='replace', index='id')
@@ -70,6 +71,7 @@ df5.to_sql('RentData', con=engine, if_exists='replace', index='id')
 df6.to_sql("Rent_Forecasts", con=engine, if_exists='replace', index='id')
 df7.to_sql("Mortgage_Rates", con=engine, if_exists='replace', index='id')
 df8.to_sql("ACS_nys_housing_acs_2015_2023", con=engine, if_exists='replace', index='id')
+df9.to_sql("npv_results", con=engine, if_exists='replace', index='id')
 
 print("Database successfully populated")
 

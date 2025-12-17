@@ -13,7 +13,7 @@ for i in range(start, end+1, 2):
 
 r=requests.get('https://livingwage.mit.edu/counties/36001')
 html_doc=r.text
-soup=BeautifulSoup(html_doc)
+soup=BeautifulSoup(html_doc, 'html.parser')
 
 expenseTable=soup.find_all(class_='results_table table-striped expense_table')[0]
 col_names=[]
@@ -78,7 +78,7 @@ links=['https://web.archive.org/web/20151220151322/https://livingwage.mit.edu/st
 
 requestPerYear=[]
 for link in links:
-    requestPerYear.append(BeautifulSoup(requests.get(link).text))
+    requestPerYear.append(BeautifulSoup(requests.get(link).text, 'html.parser'))
 
 tablePerYear=[]
 for request in requestPerYear:
